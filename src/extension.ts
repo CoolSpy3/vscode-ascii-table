@@ -140,7 +140,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	let printableItems: vscode.QuickPickItem[] = items.filter(item => item.printable);
 	let printableDisposable = vscode.commands.registerCommand('extension.printableChars', () => {
-		vscode.window.showQuickPick(printableItems, { matchOnDetail: true });
+		vscode.window.showQuickPick(printableItems, { matchOnDescription: true });
 	});
 
 	context.subscriptions.push(allDisposable);
